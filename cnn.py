@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import torchvision.transforms as transforms
 
-model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=True)
+model = torchvision.models.detection.maskrcnn_resnet50_fpn(weights='MaskRCNN_ResNet50_FPN_Weights.DEFAULT')
 model.eval()
 
 COCO_INSTANCE_CATEGORY_NAMES = [

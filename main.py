@@ -100,7 +100,6 @@ class MasterWidget(QWidget):
                  , self.CONFIG),
             Padding(5, self.CONFIG),
             QPixmap('./ASSETS/SHAMPOO.png'),
-            # QPixmap("ASSETS/MONEY.png"),
             Title("4 - Pourquoi les entreprises veulent mes données ?", self.CONFIG),
             Text('<p style="line-height:' + str(
                 CONFIG[
@@ -141,10 +140,6 @@ class MasterWidget(QWidget):
 
         ]
         for widget in WIDGETS_ONE:
-
-            # if type(widget) == Text or type(widget) == Title:
-            #     # widget.setWordWrap(False)
-            #     # widget.setAlignment(Qt.AlignCenter)
             if type(widget) != QPixmap:
                 self.ELEMENTS.append(widget)
                 form_layout.addWidget(widget, alignment=Qt.AlignCenter)
@@ -159,24 +154,9 @@ class MasterWidget(QWidget):
             elif type(widget) == AIPanel:
                 widget.setFixedWidth(1200)
                 widget.setFixedHeight(900)
-                # self.ELEMENTS.append(widget)
-                # formLayout.addWidget(widget, alignment=Qt.AlignCenter)
-            # elif type(widget) == Button:
-            #
-            #     self.ELEMENTS.append(widget)
-            #     formLayout.addWidget(widget, alignment=Qt.AlignCenter)
-            # elif type(widget) == Padding:
-            #
-            #     self.ELEMENTS.append(widget)
-            #     formLayout.addWidget(widget, alignment=Qt.AlignCenter)
-
-            # if "href" in widget.text():
-            #     widget.setTextFormat(Qt.RichText)
-            #     widget.setTextInteractionFlags(Qt.TextBrowserInteraction)
-            #     widget.setOpenExternalLinks(True)
 
         for el in self.ELEMENTS:
-            if self.CONFIG['DEBUG']:
+            if not self.CONFIG['DEBUG']:
                 el.hide()
         form_layout.setContentsMargins(0, 0, 0, 0)
         form_layout.setSizeConstraint(QLayout.SetFixedSize)
@@ -196,7 +176,6 @@ class MasterWidget(QWidget):
 
                         if idx != len(self.ELEMENTS) - 1 and type(self.ELEMENTS[idx + 1]) in [Title]:
                             break
-                # self.vsb.setValue(self.vsb.maximum() + 200)
                 QTimer.singleShot(100, self.handle_timeout)
                 self.STEP_COUNTER += 1
         if Qt.Key_W == event.key() and modifiers == Qt.ControlModifier:
