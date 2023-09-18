@@ -406,7 +406,7 @@ class AIPanel(QLabel):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-
+    
     CONFIG = json.load(open('config.json'))
     CONFIG['FONT'] = QFont('Helvetica', pixel_to_pt(CONFIG['TEXT_SIZE']))
     CONFIG['FONT_TITLE'] = QFont('Helvetica', pixel_to_pt(CONFIG['TITLE_SIZE']))
