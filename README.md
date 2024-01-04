@@ -1,3 +1,6 @@
+
+![alt text](https://github.com/JoachimHugonot/activite_enjeux-de-societe/blob/main/analyse.png?raw=true)
+
 # Procedure
 ### Requirement
 - Un environement Python <span style="color:red"> 3.7 </span> ou <span style="color:red"> MOINS </span>
