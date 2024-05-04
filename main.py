@@ -81,7 +81,7 @@ class MasterWidget(QWidget):
             Title('2 - Que sait le magasin sur vous ?', self.CONFIG),
             Text('<p style="line-height:' + str(
                 CONFIG['LINE_HEIGHT']) + ';">Le magasin sait quel shampoing vous venez d\'acheter.<br>'
-                                         "Est-ce que vous pensez que cette information personelle révèle beaucoup à votre sujet ?</p>",
+                                         "Est-ce que vous pensez que cette information personnelle révèle beaucoup à votre sujet ?</p>",
                  self.CONFIG),
             self.but1,
             self.but2,
@@ -105,7 +105,7 @@ class MasterWidget(QWidget):
                 CONFIG[
                     'LINE_HEIGHT']) + ';">Les entreprises gagnent de l\'argent avec vos informations personnelles<br>'
                                       'Le magasin les a utilisées pour personnaliser la publicité envoyée à l\'adolescente : des couches et des berceaux.<br>'
-                                      'Une carte de fidélité nous fait économiser de l\'argent, mais en échange, nous payons avec nos informations personelles...<br>'
+                                      'Une carte de fidélité nous fait économiser de l\'argent, mais en échange, nous payons avec nos informations personnelles...<br>'
                                       '... afin que les entreprises gagnent encore plus d\'argent !</p>', self.CONFIG),
             Padding(5, self.CONFIG),
             QPixmap("./ASSETS/MONEY.png"),
@@ -123,7 +123,7 @@ class MasterWidget(QWidget):
             Text('<p style="line-height:' + str(
                 CONFIG[
                     'LINE_HEIGHT']) + ';">Maintenant, vous allez analyser des photos avec un réseau de neurones. <br>'
-                                      'N\'hésitez pas à analyser vos photos personelles : nous garantissons que nous ne gardons aucune image.</p>',
+                                      'N\'hésitez pas à analyser vos photos personnelles : nous garantissons que nous ne gardons aucune image.</p>',
                  self.CONFIG),
 
             AIPanel(self.CONFIG),
